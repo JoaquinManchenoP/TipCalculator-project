@@ -1,18 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+
+
+    <RadioGroup
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/radioGroup"
+
+
+
+        >
+
+        <RadioButton
+            android:id="@+id/radio__fifteen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="selectedButton"
+            android:text="15"
+            android:layout_marginRight="100dp"
+            />
+
+        <RadioButton
+            android:id="@+id/radio__twenty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="selectedButton"
+            android:text="20"
+            android:layout_marginRight="20dp"/>
+
+        <RadioButton
+            android:id="@+id/radio__twentyFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25"
+            android:onClick="selectedButton"
+            android:layout_marginRight="20dp"
+            />
+
+        <RadioButton
+            android:id="@+id/radio__custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom Tip"
+            android:onClick="selectedButton"
+            android:layout_marginRight="20dp"
+            />
+
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/peopleInput"
+        android:layout_marginTop="120dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_above="@+id/numberOfPeople"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="249dp"
+        android:ems="10"
+        android:hint="Number of People"
+        android:inputType="number" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/totalCost"
+        android:layout_marginTop="160dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/numberOfPeople"
+        android:layout_centerHorizontal="true"
+
+        android:ems="10"
+        android:hint="Total Cost"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="480dp"
+        android:text="Calculate Tip" />
+
+
+</RelativeLayout>
